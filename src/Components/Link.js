@@ -4,7 +4,7 @@ export class Link extends Component {
   addStyling = () => {
     var percentScrolled = (window.pageYOffset/window.innerHeight)*100;
     if (this.props.link.id === this.props.activeLink) {
-      return { color: '#507A77' }
+      return { color: '#6096C8' }
     } else {
       if (this.props.activeLink === 0) {
         if (percentScrolled > 30) {
