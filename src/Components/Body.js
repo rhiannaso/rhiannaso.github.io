@@ -5,6 +5,7 @@ import About from './About';
 import Projects from './Projects';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
+import Arrow from '../Images/Arrow.png';
 
 export class Body extends Component {
   constructor()
@@ -18,25 +19,7 @@ export class Body extends Component {
       this.setState({
         activeLink: id
       })
-      var scrollDist = 0
-      if (id === 1) {
-        scrollDist = window.innerHeight-70;
-      } else if (id === 2) {
-        scrollDist = (window.innerHeight*2)-140;
-      } else if (id === 3) {
-        scrollDist = (window.innerHeight*3)-210;
-      } else if (id === 4) {
-        scrollDist = (window.innerHeight*4)-280;
-      } else {
-        scrollDist = 0
-      }
-      this.scrollToSection(scrollDist)
     }
-  }
-
-  scrollToSection = (distToTop) => {
-    console.log(distToTop)
-    window.scrollTo({ top: distToTop, behavior: 'smooth' });
   }
 
   componentDidMount() {
@@ -81,21 +64,24 @@ export class Body extends Component {
     var percentScrolled = (window.pageYOffset/window.innerHeight)*100;
     if (activeLink === 0) {
       if (percentScrolled > 30) {
-        return { backgroundColor: '#FFF' }
+        return { 
+          backgroundColor: '#FFF',
+          animation: 'fadeInDown .3s',
+        }
       } else {
         return {
           backgroundColor: 'transparent',
           borderBottom: 'none',
-          boxShadow: 'none'
+          boxShadow: 'none',
+          animation: 'fadeOutUp .3s',
         }
       }
     } else {
-      return { backgroundColor: '#FFF' }
+      return { 
+        backgroundColor: '#FFF',
+        animation: 'fadeInDown .3s', 
+      }
     }
-  }
-
-  displayContent = () => {
-    console.log("stub")
   }
 
   render() {
@@ -103,23 +89,30 @@ export class Body extends Component {
       {
         id: 1,
         title: 'About',
+        src: '#about'
       },
       {
         id: 2,
         title: 'Projects',
+        src: '#projects'
       },
       {
         id: 3,
         title: 'Portfolio',
+        src: '#portfolio'
       },
       {
         id: 4,
         title: 'Resume',
+        src: '#contact'
       },
     ]
     return(
       <div className="main-body">
         <div className="nav animate__animated animate__slideInDown" style={this.toggleNavBar()}>
+          <div className="logo" style={{display: this.state.display}}>
+            <a href="#landing" style={{color: '#111'}}>RS</a>
+          </div>
           <Nav sections={sections} changeLink={this.changeLink} activeLink={this.state.activeLink} />
         </div>
         <div><Landing /></div>
@@ -127,9 +120,10 @@ export class Body extends Component {
         <div><Projects /></div>
         <div><Portfolio /></div>
         <div><Contact /></div>
-        <div className="scroll-btn" style={{display: this.state.display}} onClick={this.scrollToTop}>Top</div>
+        <div className="scroll-btn" style={{display: this.state.display, animation: 'fadeIn .2s'}} onClick={this.scrollToTop}>
+          <img src={Arrow} className="arrow" />
+        </div>
       </div>
-      //this.displayContent()
     );
   }
 }

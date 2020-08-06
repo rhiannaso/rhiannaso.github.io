@@ -7,7 +7,7 @@ export class Landing extends Component {
   componentDidMount() {
     // Typing element from: https://mattboldt.com/demos/typed-js/
     var options = {
-      strings: ['Growing Developer', 'Aspiring Engineer', 'Learning Student', 'Curious Designer'],
+      strings: ['Growing Developer', 'Aspiring Engineer', 'Learning Student', 'Curious Designer', 'Sporadic Writer', 'Casual Home Baker', 'Avid Music Listener'],
       typeSpeed: 50,
       backSpeed: 30,
       loop: true,
@@ -21,7 +21,7 @@ export class Landing extends Component {
 
   render() {
     return(
-      <div className="landing animate__animated animate__fadeIn">
+      <div id="landing" className="animate__animated animate__fadeIn">
         <img src={BG} className="landingImg" />
         <div className="intro">
           <img src={PFP} className="profile" />

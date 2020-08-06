@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 
 export class Link extends Component {
+  setHover = (link) => {
+    if (this.props.link.id !== this.props.activeLink) {
+      link.target.style.color = '#E5CCB4'
+    } else {
+      link.target.style.cursor = 'default'
+    }
+  }
+  clearHover = (link) => {
+    var percentScrolled = (window.pageYOffset/window.innerHeight)*100;
+    if (this.props.link.id !== this.props.activeLink) {
+      if (this.props.activeLink === 0 && percentScrolled < 30) {
+        link.target.style.color = '#FFF' 
+      } else {
+        link.target.style.color = '#555' 
+      }
+    } else {
+      link.target.style.cursor = 'pointer'
+    }
+  }
   addStyling = () => {
     var percentScrolled = (window.pageYOffset/window.innerHeight)*100;
     if (this.props.link.id === this.props.activeLink) {
@@ -20,8 +39,8 @@ export class Link extends Component {
 
   render() {
     return(
-      <div className='link' style={this.addStyling()} onClick={this.props.changeLink.bind(this, this.props.link.id)}>
-        {this.props.link.title}
+      <div className='link' onMouseOver={this.setHover} onMouseOut={this.clearHover} onClick={this.props.changeLink.bind(this, this.props.link.id)}>
+        <a href={this.props.link.src} style={this.addStyling()} onMouseOver={this.setHover} onMouseOut={this.clearHover}>{this.props.link.title}</a>
       </div>
     );
   }

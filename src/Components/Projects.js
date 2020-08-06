@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Projects extends Component {
   render() {
     return(
-      <div className="proj-sect"></div>
+      <div id="projects"></div>
     );
   }
 }
