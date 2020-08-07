@@ -39,8 +39,8 @@ export class Link extends Component {
 
   render() {
     return(
-      <div className='link' onMouseOver={this.setHover} onMouseOut={this.clearHover} onClick={this.props.changeLink.bind(this, this.props.link.id)}>
-        <a href={this.props.link.src} style={this.addStyling()} onMouseOver={this.setHover} onMouseOut={this.clearHover}>{this.props.link.title}</a>
+      <div className='link'>
+        <a href={this.props.link.src} style={this.addStyling()} onMouseOver={this.setHover} onMouseOut={this.clearHover} onClick={this.props.changeLink.bind(this, this.props.link.id)}>{this.props.link.title}</a>
       </div>
     );
   }

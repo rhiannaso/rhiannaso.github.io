@@ -5,7 +5,7 @@ import About from './About';
 import Projects from './Projects';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
-import Arrow from '../Images/Arrow.png';
+import Arrow from '../Images/arrow.png';
 
 export class Body extends Component {
   constructor()
