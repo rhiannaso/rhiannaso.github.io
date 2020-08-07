@@ -27,6 +27,10 @@ a {
   z-index: 2;
 }
 
+.scroll-btn:hover {
+  background-color: #C27D3D;
+}
+
 .arrow {
   width: 25px;
   height: 17px;
@@ -206,11 +210,29 @@ a {
   text-align: center;
 }
 
+.lh-side a {
+  color: #FFF;
+  font-weight: bold;
+}
+
 .resume {
   margin-top: 7%;
   height: 90%;
   border: 1px solid #555;
   display: inline-block;
+}
+
+.open-msg {
+  top: 8%;
+  left: 5%;
+  width: 13vh;
+  height: 13vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
 }
 
 .rh-side {
@@ -239,6 +261,10 @@ a {
   border: 2px solid #FFF;
 }
 
+.dl-btn:hover {
+  background-color: #C89260;
+}
+
 .icon-bar {
   width: 50%;
   display: grid;
@@ -249,4 +275,9 @@ a {
 .icon {
   width: 7vh;
   height: 7vh;
+}
+
+.icon-small {
+  width: 7.5vh;
+  height: 7.5vh;
 }
