@@ -13,10 +13,13 @@ export class Project extends Component {
           <span className="proj-subhead">Technologies Used:</span>
           <br/>
           <div className="tech-list">
-            <img src={this.props.project.techImg[0]} className="tech" /> {this.props.project.techTxt[0]}<br/>
-            <img src={this.props.project.techImg[1]} className="tech" /> {this.props.project.techTxt[1]}<br/>
-            <img src={this.props.project.techImg[2]} className="tech" /> {this.props.project.techTxt[2]}<br/>
-            <img src={this.props.project.techImg[3]} className="tech" /> {this.props.project.techTxt[3]}<br/>
+            {this.props.project.techImg.map((tech, i) => (
+              <div><img src={tech} className="tech" /> {this.props.project.techTxt[i]}<br/></div>
+            ))}
+          </div>
+          <br/>
+          <div className="gh-view">
+            <a href={this.props.project.ghSrc}>{this.props.project.gh}</a>
           </div>
         </div>
       </div>

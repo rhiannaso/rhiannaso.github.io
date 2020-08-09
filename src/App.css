@@ -139,6 +139,7 @@ a {
 .title {
   font-size: 56px;
   font-weight: bold;
+  font-family: 'IBM Plex Serif', serif;
   color: #FFF;
   text-shadow: 0px 0px 8px #888;
 }
@@ -154,7 +155,7 @@ a {
 
 #about {
   width: 100%;
-  height: calc(100% - 70px);
+  height: calc(125% - 70px);
   top: 100vh;
   background-color: none;
   display: flex;
@@ -175,16 +176,41 @@ a {
   position: absolute;
 }
 
+.blurb {
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  color: #FFF;
+  background-color: #6096C8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.blurb-title {
+  color: #FFF;
+  margin: 32px 0px 12px 0px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 4vh;
+  font-family: 'IBM Plex Serif', serif;
+}
+
+.blurb-body {
+  width: 50%;
+  margin-bottom: 32px;
+}
+
 /* Projects.js */
 
 #projects {
   width: 100%;
-  height: calc(100% - 70px);
-  top: 190vh;
+  height: calc(175% - 70px);
+  top: 215vh;
   background-color: #D6E4F1;
-  box-shadow: 0px -4px 8px #BBB, 0px 4px 8px #BBB;
   display: grid;
-  grid-template-rows: 12% 88%;
+  grid-template-rows: 10% 88%;
   grid-template-columns: 100%;
   justify-content: center;
   align-items: center;
@@ -193,13 +219,14 @@ a {
 }
 
 .proj-header {
-  align-self: end;
+  align-self: center;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #555;
   font-weight: bold;
   font-size: 5vh;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 .proj-wrapper {
@@ -232,7 +259,6 @@ a {
 
 .proj-name {
   width: 100%;
-  height: 5%;
   color: #FFF;
   font-weight: bold;
   font-size: 3vh;
@@ -244,7 +270,7 @@ a {
 
 .proj-body {
   padding: 20px;
-  font-size: 2.5vh;
+  font-size: 2.3vh;
   color: #555;
   overflow: auto;
 }
@@ -252,6 +278,19 @@ a {
 .proj-subhead {
   color: #C27D3D;
   font-weight: bold;
+}
+
+.gh-view {
+  width: calc(100%-16px);
+  padding: 8px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.gh-view a {
+  color: #6096C8;
+  font-weight: bold;
+  font-style: none;
 }
 
 .tech-list {
@@ -269,7 +308,7 @@ a {
 #portfolio {
   width: 100%;
   height: calc(100% - 70px);
-  top: 280vh;
+  top: 380vh;
   background-color: none;
   position: absolute;
 }
@@ -279,9 +318,8 @@ a {
 #contact {
   width: 100%;
   height: calc(100% - 70px);
-  top: 370vh;
+  top: 470vh;
   background-color: #D6E4F1;
-  box-shadow: 0px -4px 8px #BBB;
   display: flex;
   justify-content: center;
   overflow: auto;
