@@ -12,7 +12,7 @@ export class Body extends Component {
   {
     super();
     this.state = {
-      display: 'none',
+      display: "none",
       activeLink: 0
     }
     this.changeLink = (id) => {
@@ -23,39 +23,43 @@ export class Body extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.prepScroll)
+    window.addEventListener("scroll", this.prepScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.prepScroll)
+    window.removeEventListener("scroll", this.prepScroll);
   }
 
   prepScroll = () => {
     var windowHeight = window.innerHeight;
     var amtScrolled = window.pageYOffset;
     var percentScrolled = (amtScrolled/windowHeight)*100;
+    var sect1Dist = document.getElementById("about").offsetTop-1;
+    var sect2Dist = document.getElementById("projects").offsetTop-1;
+    var sect3Dist = document.getElementById("portfolio").offsetTop-1;
+    var sect4Dist = document.getElementById("contact").offsetTop-1;
 
     if (percentScrolled > 30) {
-      this.setState({ display: 'block' });
+      this.setState({ display: "block" });
     } else {
-      this.setState({ display: 'none', activeLink: 0 });
+      this.setState({ display: "none", activeLink: 0 });
     }
 
-    if (amtScrolled < windowHeight-70) {
+    if (amtScrolled < sect1Dist-70) {
       this.setState({ activeLink: 0 });
-    } else if (amtScrolled >= windowHeight-70 && amtScrolled < 2*windowHeight-140) {
+    } else if (amtScrolled >= sect1Dist-70 && amtScrolled < sect2Dist-70) {
       this.setState({ activeLink: 1 });
-    } else if (amtScrolled >= 2*windowHeight-140 && amtScrolled < 3*windowHeight-210) {
+    } else if (amtScrolled >= sect2Dist-70 && amtScrolled < sect3Dist-70) {
       this.setState({ activeLink: 2 });
-    } else if (amtScrolled >= 3*windowHeight-210 && amtScrolled < 4*windowHeight-280) {
+    } else if (amtScrolled >= sect3Dist-70 && amtScrolled < sect4Dist-70) {
       this.setState({ activeLink: 3 });
     } else {
-      this.setState({ activeLink: 4 })
+      this.setState({ activeLink: 4 });
     }
   }
 
   scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     this.setState({ activeLink: 0 });
   }
 
@@ -65,21 +69,21 @@ export class Body extends Component {
     if (activeLink === 0) {
       if (percentScrolled > 30) {
         return { 
-          backgroundColor: '#FFF',
-          animation: 'fadeInDown .3s',
+          backgroundColor: "#FFF",
+          animation: "fadeInDown .3s",
         }
       } else {
         return {
-          backgroundColor: 'transparent',
-          borderBottom: 'none',
-          boxShadow: 'none',
-          animation: 'fadeOutUp .3s',
+          backgroundColor: "transparent",
+          borderBottom: "none",
+          boxShadow: "none",
+          animation: "fadeOutUp .3s",
         }
       }
     } else {
       return { 
-        backgroundColor: '#FFF',
-        animation: 'fadeInDown .3s', 
+        backgroundColor: "#FFF",
+        animation: "fadeInDown .3s", 
       }
     }
   }
@@ -88,39 +92,39 @@ export class Body extends Component {
     const sections = [
       {
         id: 1,
-        title: 'About',
-        src: '#about'
+        title: "About",
+        src: "#about"
       },
       {
         id: 2,
-        title: 'Projects',
-        src: '#projects'
+        title: "Projects",
+        src: "#projects"
       },
       {
         id: 3,
-        title: 'Portfolio',
-        src: '#portfolio'
+        title: "Portfolio",
+        src: "#portfolio"
       },
       {
         id: 4,
-        title: 'Resume',
-        src: '#contact'
+        title: "Resume",
+        src: "#contact"
       },
     ]
     return(
       <div className="main-body">
         <div className="nav animate__animated animate__slideInDown" style={this.toggleNavBar()}>
           <div className="logo" style={{display: this.state.display}}>
-            <a href="#landing" style={{color: '#111'}}>RS</a>
+            <a href="#landing" style={{color: "#111"}}>RS</a>
           </div>
           <Nav sections={sections} changeLink={this.changeLink} activeLink={this.state.activeLink} />
         </div>
-        <div><Landing /></div>
-        <div><About /></div>
-        <div><Projects /></div>
-        <div><Portfolio /></div>
-        <div><Contact /></div>
-        <div className="scroll-btn" style={{display: this.state.display, animation: 'fadeIn .2s'}} onClick={this.scrollToTop}>
+        <Landing />
+        <About />
+        <Projects />
+        <Portfolio />
+        <Contact />
+        <div className="scroll-btn" style={{display: this.state.display, animation: "fadeIn .2s"}} onClick={this.scrollToTop}>
           <img src={Arrow} className="arrow" />
         </div>
       </div>
