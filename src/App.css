@@ -222,12 +222,12 @@ a {
 
 .proj-1 {
   justify-self: end;
-  margin-right: 16px;
+  margin-right: 24px;
 }
 
 .proj-2 {
   justify-self: start;
-  margin-left: 16px;
+  margin-left: 24px;
 }
 
 .proj-name {
