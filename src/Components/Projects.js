@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProjList from './ProjList';
+import Project from './Project';
 import Py from '../Images/py.png';
 import BC from '../Images/bc.png';
 import Qt from '../Images/qt.png';
@@ -68,9 +68,11 @@ export class Projects extends Component {
     ]
     return(
       <div id="projects">
-        <div className="proj-header">My Projects</div>
+        <div className="header">My Projects</div>
         <div className="proj-wrapper">
-          <ProjList projects={projects} />
+          {projects.map((project) => (
+            <Project project={project} />
+          ))}
         </div>
       </div>
     );
