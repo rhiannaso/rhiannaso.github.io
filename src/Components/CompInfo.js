@@ -4,6 +4,10 @@ export class CompInfo extends Component {
   render() {
     return(
       <div className="comp-sect">
+        <div className="date">
+          {this.props.comp.start} -<br/>
+          {this.props.comp.end}
+        </div>
         <img src={this.props.comp.src} className="comp-logo" />
         <div className="comp-title">
           {this.props.comp.title}

@@ -25,7 +25,9 @@ export class About extends Component {
         stages to a fully functional model", "Designed and programmed code correction \
         scripts that fixed defects in over 1,000 test cases", "Worked as a part of a \
         cyber team with an agile workflow"],
-        src: RTX
+        src: RTX,
+        start: "June '19/'20",
+        end: "Aug. '19/'20"
       },
       {
         title: "Software Engineering Intern",
@@ -33,7 +35,9 @@ export class About extends Component {
         desc: ["Encouraged user engagement by implementing discovery features that \
         incentivized user-to-user interaction", "Worked as a part of a startup to \
         produce continuous deliverables using test-driven development"],
-        src: Ditto
+        src: Ditto,
+        start: "Apr. 2020",
+        end: "June 2020"
       },
       {
         title: "Web Page Designer",
@@ -41,7 +45,9 @@ export class About extends Component {
         desc: ["Designed and developed web pages made specifically for Tumblr blogs \
         that have been used by over 1,000 users", "Communicated clearly with users \
         and distributed code to interested users"],
-        src: Tumblr
+        src: Tumblr,
+        start: "Aug. 2013",
+        end: "Jan. 2019"
       },
     ]
     const fluent = [
