@@ -30,28 +30,28 @@ export class Projects extends Component {
         ghSrc: "",
       },
       {
-        title: "ReciPull",
-        desc: "A web application that takes a user-inputted list of ingredients (through \
-          the app or Alexa skill) and outputs recipes containing those ingredients. \
-          Users are able to filter searches, as well as upvote or downvote recipes.",
-        date: "April 2019 - June 2019",
-        class: "proj proj-2",
-        techImg: [Java, SQL, RLogo, RDS],
-        techTxt: ["Java", "MySQL", "ReactJS", "AWS Relational Database Service"],
-        gh: "",
-        ghSrc: "",
-      },
-      {
         title: "Personal Site",
         desc: "A fun website I created as part of my human-computer interaction course \
         during the 2020 spring quarter. Creating this site helped me familiarize myself \
         with React and learn to work with APIs and data visualization.",
         date: "April 2020 - June 2020",
-        class: "proj proj-1",
+        class: "proj proj-2",
         techImg: [RLogo, Fb, Omdb, D3],
         techTxt: ["React", "Firebase", "OMDb API", "D3 JavaScript Library"],
         gh: "- View GitHub Repository -",
         ghSrc: "https://github.com/rhiannaso/react-portfolio",
+      },
+      {
+        title: "ReciPull",
+        desc: "A web application that takes a user-inputted list of ingredients (through \
+          the app or Alexa skill) and outputs recipes containing those ingredients. \
+          Users are able to filter searches, as well as upvote or downvote recipes.",
+        date: "April 2019 - June 2019",
+        class: "proj proj-1",
+        techImg: [Java, SQL, RLogo, RDS],
+        techTxt: ["Java", "MySQL", "ReactJS", "AWS Relational Database Service"],
+        gh: "",
+        ghSrc: "",
       },
       {
         title: "ATM/Bank Teller Interface",
@@ -65,6 +65,7 @@ export class Projects extends Component {
         gh: "- View GitHub Repository -",
         ghSrc: "https://github.com/rhiannaso/Project",
       },
+      
     ]
     return(
       <div id="projects">

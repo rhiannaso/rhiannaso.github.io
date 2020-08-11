@@ -12,7 +12,7 @@ export class Contact extends Component {
   {
     super();
     this.state = {
-      display: 'none',
+      display: 'flex',
       filter: 'brightness(1.0)'
     }
   }
