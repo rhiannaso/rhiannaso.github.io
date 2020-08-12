@@ -64,8 +64,7 @@ export class Projects extends Component {
         techTxt: ["Java", "SQL", "Oracle Database"],
         gh: "- View GitHub Repository -",
         ghSrc: "https://github.com/rhiannaso/Project",
-      },
-      
+      }
     ]
     return(
       <div id="projects">

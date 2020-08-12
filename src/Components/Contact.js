@@ -12,7 +12,7 @@ export class Contact extends Component {
   {
     super();
     this.state = {
-      display: 'flex',
+      display: 'none',
       filter: 'brightness(1.0)'
     }
   }
@@ -43,7 +43,7 @@ export class Contact extends Component {
               <a href="https://github.com/rhiannaso" target="_blank"><img src={GH} className="icon-small" /></a>
             </div>
             <a href={Resume} target="_blank" style={{color: "#FFF"}}>
-              <div className="dl-btn">Download <img src={DL} style={{marginLeft: "8px", height: "16px"}} /></div>
+              <div className="dl-btn">Download <img src={DL} style={{marginLeft: "0.5vw", height: "1.1vw"}} /></div>
             </a>
           </div>
         </div>

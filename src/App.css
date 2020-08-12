@@ -208,7 +208,7 @@ a {
 }
 
 .comp-title {
-  color: #777;
+  color: #555;
   font-size: 3.5vh;
   font-family: 'IBM Plex Serif', serif;
   margin-left: 4.5vh;
@@ -296,9 +296,8 @@ a {
   width: 100%;
   height: auto;
   background-color: #D6E4F1;
-  padding: 16px 0px 24px 0px;
+  padding: 24px 0px;
   display: grid;
-  grid-template-rows: 10% 88%;
   grid-template-columns: 100%;
   justify-content: center;
   align-items: center;
@@ -306,6 +305,7 @@ a {
 }
 
 .header {
+  margin-top: 8px;
   align-self: center;
   text-align: center;
   text-transform: uppercase;
@@ -413,13 +413,28 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.slide-info {
+  width: 60%;
+  height: auto;
+  top: 0px;
+  padding: 16px 0px;
+  margin-left: 1px;
+  color: #444;
 }
 
 .slide {
   width: 60%;
   height: 100%;
-  background-color: #FFF;
+  position: relative;
   display: none;
+  transition: .6 ease;
+}
+
+.slide:hover {
+  cursor: pointer;
 }
 
 .slideImg {
@@ -428,11 +443,6 @@ a {
   border: 1px solid #AAA;
   border-radius: 30px;
   object-fit: cover;
-}
-
-.fade {
-  -webkit-animation: fadeIn 1s;
-  animation: fadeIn 1s;
 }
 
 .slide-arrow {
@@ -479,6 +489,26 @@ a {
 .active-dot {
   background-color: #555;
   border: 1px solid #555;
+}
+
+.lightbox {
+  display: grid;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,0.8);
+  z-index: 1;
+  overflow: auto;
+  position: fixed;
+  align-content: center;
+  justify-content: center;
+}
+
+.lightbox-content {
+  width: 75%;
+  margin: auto;
+  border: 5px solid #FFF;
 }
 
 /* Contact.js */
@@ -545,20 +575,21 @@ a {
 .contact-msg {
   font-family: 'IBM Plex Serif', serif;
   color: #9ABDDE;
-  line-height: 12vh;
-  font-size: 12vh;
+  line-height: 6vw;
+  font-size: 6vw;
   font-weight: bold;
 }
 
 .dl-btn {
-  width: 150px;
-  height: 24px;
+  width: 10vw;
+  height: auto;
   padding: 12px;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 1px;
   background-color: #D4A377;
   border: 2px solid #FFF;
+  font-size: 1.1vw;
 }
 
 .dl-btn:hover {
@@ -573,11 +604,11 @@ a {
 }
 
 .icon {
-  width: 7vh;
-  height: 7vh;
+  width: 3.5vw;
+  height: 3.5vw;
 }
 
 .icon-small {
-  width: 7.5vh;
-  height: 7.5vh;
+  width: 4vw;
+  height: 4vw;
 }
