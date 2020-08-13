@@ -25,7 +25,7 @@ export class Landing extends Component {
         <img src={BG} className="landingImg" />
         <div className="intro">
           <img src={PFP} className="profile" />
-          <span className="text-sect">
+          <div className="text-sect">
             <span className="title">Hi there,<br/>I'm Rhianna!</span>
             <div className="subtitle">
               <span
@@ -33,7 +33,7 @@ export class Landing extends Component {
                 ref={(subtitle) => { this.subtitle = subtitle; }}
               />
             </div>
-          </span>
+          </div>
         </div>
       </div>
     );

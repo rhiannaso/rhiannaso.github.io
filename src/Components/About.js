@@ -90,21 +90,31 @@ export class About extends Component {
             <div className="comp-sect">
               <div className="skills-head">Languages I Speak:</div>
               <div className="lang-sect">
-                <div>
+                <div className="lang-subsect">
                   <span className="skills-subhead">Fluent In:</span><br/>
-                  {fluent.map((lang) => (
-                    <div className="spacer"><img src={lang.src} className="tech" /> {lang.name}</div>
-                  ))}
+                  <div className="lang-list">
+                    {fluent.map((lang) => (
+                      <div className="spacer">
+                        <img src={lang.src} className="skill-tech" />
+                        <span className="tech-name">{lang.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div>
+                <div className="lang-subsect">
                   <span className="skills-subhead">Familiar With:</span><br/>
-                  {familiar.map((lang) => (
-                    <div className="spacer"><img src={lang.src} className="tech" /> {lang.name}</div>
-                  ))}
+                  <div className="lang-list">
+                    {familiar.map((lang) => (
+                      <div className="spacer">
+                        <img src={lang.src} className="skill-tech" /> 
+                        <span className="tech-name">{lang.name}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="comp-sect divider">
+            <div className="tech-sect divider">
               <div className="skills-head">Technologies:</div>
                 {tools.map((tool) => (
                   <div className="spacer">&middot; {tool}</div>

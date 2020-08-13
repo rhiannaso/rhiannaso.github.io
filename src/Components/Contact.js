@@ -36,15 +36,17 @@ export class Contact extends Component {
           </div>
           <div className="rh-side">
             <div className="spacer"></div>
-            <div className="contact-msg">Let's<br/>Connect!</div>
-            <div className="icon-bar">
-              <a href="mailto:so.rhianna@gmail.com"><img src={Mail} className="icon" /></a>
-              <a href="https://www.linkedin.com/in/rhianna-so/" target="_blank"><img src={LinkedIn} className="icon" /></a>
-              <a href="https://github.com/rhiannaso" target="_blank"><img src={GH} className="icon-small" /></a>
+            <div className="contact-msg">Let's Connect!</div>
+            <div className="contact-info">
+              <div className="icon-bar">
+                <a href="mailto:so.rhianna@gmail.com"><img src={Mail} className="icon" /></a>
+                <a href="https://www.linkedin.com/in/rhianna-so/" target="_blank"><img src={LinkedIn} className="icon" /></a>
+                <a href="https://github.com/rhiannaso" target="_blank"><img src={GH} className="icon-small" /></a>
+              </div>
+              <a href={Resume} target="_blank" style={{color: "#FFF"}}>
+                <div className="dl-btn">Download <img src={DL} style={{marginLeft: "0.5vw", height: "1.1vw"}} /></div>
+              </a>
             </div>
-            <a href={Resume} target="_blank" style={{color: "#FFF"}}>
-              <div className="dl-btn">Download <img src={DL} style={{marginLeft: "0.5vw", height: "1.1vw"}} /></div>
-            </a>
           </div>
         </div>
       </div>
