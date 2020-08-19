@@ -25,8 +25,13 @@ export class Contact extends Component {
   render() {
     return(
       <div id="contact">
+        <div className="header">- Let's Connect! -</div>
         <div className="contact-wrap">
-          <div className="lh-side">
+          <div className="spacer"></div>
+          <a href={Resume} target="_blank" style={{color: "#FFF"}}>
+            <div className="dl-btn">Download <img src={DL} style={{marginLeft: "0.5vw", height: "1.1vw"}} /></div>
+          </a>
+          <div className="resume-seg">
             <a href={Resume} target="_blank">
               <img src={ResumeImg} className="resume" onMouseOver={this.showMsg} onMouseOut={this.hideMsg} style={{filter: this.state.filter, transition: 'ease-in .1s'}} />
               <div className="open-msg" onMouseOver={this.showMsg} onMouseOut={this.hideMsg} style={{display: this.state.display, transition: 'ease-in .1s'}}>
@@ -34,19 +39,13 @@ export class Contact extends Component {
               </div>
             </a>
           </div>
-          <div className="rh-side">
-            <div className="spacer"></div>
-            <div className="contact-msg">Let's Connect!</div>
-            <div className="contact-info">
-              <div className="icon-bar">
-                <a href="mailto:so.rhianna@gmail.com"><img src={Mail} className="icon" /></a>
-                <a href="https://www.linkedin.com/in/rhianna-so/" target="_blank"><img src={LinkedIn} className="icon" /></a>
-                <a href="https://github.com/rhiannaso" target="_blank"><img src={GH} className="icon-small" /></a>
-              </div>
-              <a href={Resume} target="_blank" style={{color: "#FFF"}}>
-                <div className="dl-btn">Download <img src={DL} style={{marginLeft: "0.5vw", height: "1.1vw"}} /></div>
-              </a>
-            </div>
+        </div>
+        <div className="footer">
+          <div className="contact-msg">Contact Me:</div>
+          <div className="icon-bar">
+            <a href="mailto:so.rhianna@gmail.com"><img src={Mail} className="icon" /></a>
+            <a href="https://www.linkedin.com/in/rhianna-so/" target="_blank"><img src={LinkedIn} className="icon" /></a>
+            <a href="https://github.com/rhiannaso" target="_blank"><img src={GH} className="icon-small" /></a>
           </div>
         </div>
       </div>

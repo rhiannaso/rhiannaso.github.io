@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export class Link extends Component {
   setHover = (link) => {
     if (this.props.link.id !== this.props.activeLink) {
-      link.target.style.color = '#E5CCB4'
+      link.target.style.color = '#10CACA'
     } else {
       link.target.style.cursor = 'default'
     }
@@ -11,7 +11,7 @@ export class Link extends Component {
   clearHover = (link) => {
     var percentScrolled = (window.pageYOffset/window.innerHeight)*100;
     if (this.props.link.id !== this.props.activeLink) {
-      if (this.props.activeLink === 0 && percentScrolled < 30) {
+      if (this.props.activeLink === 0 && percentScrolled < 20) {
         link.target.style.color = '#FFF' 
       } else {
         link.target.style.color = '#555' 
@@ -23,10 +23,10 @@ export class Link extends Component {
   addStyling = () => {
     var percentScrolled = (window.pageYOffset/window.innerHeight)*100;
     if (this.props.link.id === this.props.activeLink) {
-      return { color: '#6096C8' }
+      return { color: '#0EB3B3' }
     } else {
       if (this.props.activeLink === 0) {
-        if (percentScrolled > 30) {
+        if (percentScrolled > 20) {
           return { color: '#555' }
         } else {
           return { color: '#FFF' }

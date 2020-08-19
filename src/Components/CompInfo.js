@@ -5,15 +5,14 @@ export class CompInfo extends Component {
     return(
       <div className="comp-sect">
         <div className="comp-info">
-          <div className="date">
-            {this.props.comp.start} -<br/>
-            {this.props.comp.end}
-          </div>
           <img src={this.props.comp.src} className="comp-logo" />
         </div>
         <div className="comp-title">
-          {this.props.comp.title}
-          <span className="comp-subtitle">{this.props.comp.name}</span>
+          {this.props.comp.title}<br/>
+          <span className="comp-subtitle">{this.props.comp.name} | </span> 
+          <span className="date">
+            {this.props.comp.start} - {this.props.comp.end}
+          </span>
         </div>
         <div className="comp-desc">
           {this.props.comp.desc.map((point) => (

@@ -71,7 +71,7 @@ export class Portfolio extends Component {
     const dots = [1, 2, 3, 4, 5]
     return(
       <div id="portfolio">
-        <div className="header">My Designs</div><br/>
+        <div className="header">- What I've Designed So Far -</div><br/>
         <div className="slide-deck">
           <div>
            <img src={LArrow} className="slide-arrow l-arrow" onClick={this.switchSlide.bind(this, -1)} />

@@ -3,12 +3,12 @@ import React, { Component } from 'react';
 export class Project extends Component {
   render() {
     return(
-      <div className={this.props.project.class}>
+      <div className="proj">
+        <img src={this.props.project.src} className="proj-img" />
         <div className="proj-name">{this.props.project.title}</div>
+        <span className="proj-subhead">{this.props.project.date}</span>
         <div className="proj-body">
           {this.props.project.desc}
-          <br/><br/>
-          <span className="proj-subhead">Time Worked On: </span>&nbsp;{this.props.project.date}
           <br/><br/>
           <span className="proj-subhead">Technologies Used:</span>
           <br/>

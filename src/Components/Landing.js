@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import BG from '../Images/landing.png';
 import PFP from '../Images/pfp.jpg';
+import Art from '../Images/Artwork.png';
 import Typed from 'typed.js';
 
 export class Landing extends Component {
@@ -22,7 +22,6 @@ export class Landing extends Component {
   render() {
     return(
       <div id="landing" className="animate__animated animate__fadeIn">
-        <img src={BG} className="landingImg" />
         <div className="intro">
           <img src={PFP} className="profile" />
           <div className="text-sect">
@@ -35,6 +34,7 @@ export class Landing extends Component {
             </div>
           </div>
         </div>
+        <img src={Art} className="landingImg" />
       </div>
     );
   }

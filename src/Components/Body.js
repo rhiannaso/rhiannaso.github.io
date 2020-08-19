@@ -39,19 +39,19 @@ export class Body extends Component {
     var sect3Dist = document.getElementById("portfolio").offsetTop-1;
     var sect4Dist = document.getElementById("contact").offsetTop-1;
 
-    if (percentScrolled > 30) {
+    if (percentScrolled > 20) {
       this.setState({ display: "block" });
     } else {
       this.setState({ display: "none", activeLink: 0 });
     }
 
-    if (amtScrolled < sect1Dist-70) {
+    if (amtScrolled < sect1Dist-60) {
       this.setState({ activeLink: 0 });
-    } else if (amtScrolled >= sect1Dist-70 && amtScrolled < sect2Dist-70) {
+    } else if (amtScrolled >= sect1Dist-60 && amtScrolled < sect2Dist-60) {
       this.setState({ activeLink: 1 });
-    } else if (amtScrolled >= sect2Dist-70 && amtScrolled < sect3Dist-70) {
+    } else if (amtScrolled >= sect2Dist-60 && amtScrolled < sect3Dist-60) {
       this.setState({ activeLink: 2 });
-    } else if (amtScrolled >= sect3Dist-70 && amtScrolled < sect4Dist-70) {
+    } else if (amtScrolled >= sect3Dist-60 && amtScrolled < sect4Dist-60) {
       this.setState({ activeLink: 3 });
     } else {
       this.setState({ activeLink: 4 });
@@ -67,13 +67,15 @@ export class Body extends Component {
     var activeLink = this.state.activeLink;
     var percentScrolled = (window.pageYOffset/window.innerHeight)*100;
     if (activeLink === 0) {
-      if (percentScrolled > 30) {
+      if (percentScrolled > 20) {
         return { 
+          display: "flex",
           backgroundColor: "#FFF",
           animation: "fadeInDown .3s",
         }
       } else {
         return {
+          display: "none",
           backgroundColor: "transparent",
           borderBottom: "none",
           boxShadow: "none",
@@ -82,6 +84,7 @@ export class Body extends Component {
       }
     } else {
       return { 
+        display: "flex",
         backgroundColor: "#FFF",
         animation: "fadeInDown .3s", 
       }

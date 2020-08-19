@@ -26,8 +26,8 @@ export class About extends Component {
         scripts that fixed defects in over 1,000 test cases", "Worked as a part of a \
         cyber team with an agile workflow"],
         src: RTX,
-        start: "June '19/'20",
-        end: "Aug. '19/'20"
+        start: "June 2019/2020",
+        end: "August 2019/2020"
       },
       {
         title: "Software Engineering Intern",
@@ -36,7 +36,7 @@ export class About extends Component {
         incentivized user-to-user interaction", "Worked as a part of a startup to \
         produce continuous deliverables using test-driven development"],
         src: Ditto,
-        start: "Apr. 2020",
+        start: "April 2020",
         end: "June 2020"
       },
       {
@@ -46,8 +46,8 @@ export class About extends Component {
         that have been used by over 1,000 users", "Communicated clearly with users \
         and distributed code to interested users"],
         src: Tumblr,
-        start: "Aug. 2013",
-        end: "Jan. 2019"
+        start: "August 2013",
+        end: "January 2019"
       },
     ]
     const fluent = [
@@ -78,14 +78,14 @@ export class About extends Component {
           </div>
         </div>
         <div className="abt-wrapper">
-          <div className="header">Experience</div>
+          <div className="header">- Where I've Learned From -</div>
           <div className="comp-body">
             {companies.map((comp) => (
               <CompInfo comp={comp} />
             ))}
           </div>
           <br/>
-          <div className="header">Skills</div><br/>
+          <div className="header">- What I've Learned So Far -</div><br/>
           <div className="skills-body">
             <div className="comp-sect">
               <div className="skills-head">Languages I Speak:</div>
