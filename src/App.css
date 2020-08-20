@@ -217,14 +217,14 @@ a {
 
 .comp-subtitle {
   color: #10CACA;
-  font-size: 2.5vh;
+  font-size: 2.5vmin;
   font-weight: bold;
   font-family: 'Noto Sans', sans-serif;
 }
 
 .date {
   color: #10CACA;
-  font-size: 2.5vh;
+  font-size: 2.5vmin;
   font-weight: bold;
   font-family: 'Noto Sans', sans-serif;
   font-style: italic;
@@ -256,19 +256,20 @@ a {
   color: #333;
   display: flex;
   flex-direction: row;
+  overflow: auto;
 }
 
 .skills-head {
   color: #333;
   font-family: 'IBM Plex Serif', serif;
-  font-size: 3.5vh;
+  font-size: 3.5vmin;
   margin-bottom: 8px;
 }
 
 .skills-subhead {
   color: #0EB3B3;
   font-family: 'IBM Plex Serif', serif;
-  font-size: 2.7vh;
+  font-size: 2.7vmin;
 }
 
 .lang-sect {
@@ -310,7 +311,7 @@ a {
   letter-spacing: 1px;
   color: #111;
   font-weight: bold;
-  font-size: 5vh;
+  font-size: 5vmin;
   font-family: 'IBM Plex Serif', serif;
 }
 
@@ -703,5 +704,23 @@ a {
     justify-items: center;
     justify-content: center;
     align-content: center;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  #landing {
+    grid-template-rows: 45% 55%;
+  }
+
+  .landingImg {
+    height: 75%;
+    margin: 0 auto;
+    align-self: end;
+  }
+
+  .comp-desc {
+    margin-left: 1.5vmin;
+    padding: 16px 0px 0px 36px;
+    color: #333;
   }
 }
