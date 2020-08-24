@@ -650,6 +650,17 @@ a {
     font-size: 12px;
   }
 
+  #landing {
+    grid-template-rows: 50% 50%;
+  }
+
+  .landingImg {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    align-self: end;
+  }
+
   .logo {
     display: none;
     overflow: hidden;
@@ -659,6 +670,21 @@ a {
 
   .nav {
     justify-content: center;
+  }
+
+  .comp-desc {
+    margin-left: .25rem;
+    padding: 1.5rem 5rem 0rem 0rem;
+    color: #333;
+  }
+
+  .comp-logo {
+    margin-left: 1.75rem;
+    float: right;
+  }
+
+  .comp-info {
+    float: right;
   }
 
   /* About: Skills */
@@ -691,11 +717,6 @@ a {
     width: calc(100% - 4px);
     height: auto;
   }
-
-  /* Contact */ 
-  .open-msg {
-    top: 0%;
-  }
   
   .dl-btn {
     letter-spacing: 0px;
@@ -709,31 +730,11 @@ a {
     justify-content: center;
     align-content: center;
   }
-}
 
-@media only screen and (max-width: 350px) {
-  html, body {
-    font-size: 11px;
-  }
-
-  #landing {
-    grid-template-rows: 35% 65%;
-  }
-
-  .landingImg {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    align-self: end;
-  }
-
-  .intro {
-    align-self: center;
-  }
-
-  .comp-desc {
-    margin-left: .25rem;
-    padding: 16px 0px 0px 36px;
-    color: #333;
+  .open-msg {
+    width: .5rem;
+    height: .5rem;
+    top: 15%;
+    left: 15%;
   }
 }
