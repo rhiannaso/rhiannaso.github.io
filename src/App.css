@@ -244,7 +244,6 @@ a {
   width: 60%;
   height: 100%;
   padding: 12px;
-  margin: 0px 0px 0px 24px;
   background-color: #FFF;
   border: 1px solid #333;
   border-radius: 30px;
@@ -650,17 +649,6 @@ a {
     font-size: 12px;
   }
 
-  #landing {
-    grid-template-rows: 50% 50%;
-  }
-
-  .landingImg {
-    width: 80%;
-    height: auto;
-    margin: 0 auto;
-    align-self: end;
-  }
-
   .logo {
     display: none;
     overflow: hidden;
@@ -680,6 +668,7 @@ a {
 
   .comp-logo {
     margin-left: 1.75rem;
+    margin-right: 0rem;
     float: right;
   }
 
@@ -736,5 +725,35 @@ a {
     height: .5rem;
     top: 15%;
     left: 15%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #landing {
+    grid-template-rows: 57% 43%;
+  }
+
+  .landingImg {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    align-self: end;
+  }
+
+  .intro {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .profile {
+    margin-left: calc(50% - 6rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .text-sect {
+    text-align: center;
+    width: 100%;
   }
 }

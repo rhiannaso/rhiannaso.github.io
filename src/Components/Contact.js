@@ -29,13 +29,13 @@ export class Contact extends Component {
         <div className="contact-wrap">
           <div className="spacer"></div>
           <a href={Resume} target="_blank" style={{color: "#FFF"}}>
-            <div className="dl-btn">Download <img src={DL} style={{marginLeft: "0.5vw", height: "1.1vw"}} /></div>
+            <div className="dl-btn">Download <img src={DL} style={{marginLeft: ".25rem", height: "1rem"}} /></div>
           </a>
           <div className="resume-seg">
             <a href={Resume} target="_blank">
               <img src={ResumeImg} className="resume" onMouseOver={this.showMsg} onMouseOut={this.hideMsg} style={{filter: this.state.filter, transition: 'ease-in .1s'}} />
               <div className="open-msg" onMouseOver={this.showMsg} onMouseOut={this.hideMsg} style={{display: this.state.display, transition: 'ease-in .1s'}}>
-                <img src={Open} style={{width: '7vh'}} />
+                <img src={Open} style={{width: '3.5rem'}} />
               </div>
             </a>
           </div>
